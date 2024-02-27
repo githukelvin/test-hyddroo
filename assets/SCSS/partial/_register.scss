@@ -1,0 +1,93 @@
+@use "../fonts" as *;
+@use "../mixins" as *;
+.register {
+  padding-block: 8em;
+  h1 {
+    font-family: "exbold";
+    font-size: 2em;
+    padding-block: 2em;
+  }
+  .formDiv {
+    margin-inline: auto;
+    padding: 2em;
+    @include responsive(bmd) {
+      width: 90%;
+    }
+    form {
+      .form-group {
+        width: 100%;
+        .input-group {
+          width: 100%;
+          border-top-left-radius: 0.75rem;
+          border-bottom-left-radius: 0.75rem;
+          input {
+            width: 90%;
+            border-top-left-radius: 0.75rem;
+            border-bottom-left-radius: 0.75rem;
+          }
+        }
+
+        label {
+          font-family: "medium";
+          line-height: 1.4;
+          font-size: 1.2em;
+        }
+      }
+    }
+  }
+}
+.roundit {
+  border-radius: 0.75em;
+}
+.has-text-success {
+  color: green;
+}
+.has-text-danger {
+  color: red;
+}
+.is-right {
+  margin-left: 2em;
+  @include responsive(bmd) {
+    margin-left: 1em;
+  }
+}
+
+.is_sucess,
+.is-success {
+  border: 1px solid green;
+}
+.passField {
+  width: 100%;
+  // display: grid;
+  // grid-template-columns: 90% 5em;
+  // place-items: center;
+  .eye {
+    display: grid;
+    place-items: center;
+    border-top-right-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+    padding-block: 0.67em;
+    height: 100%;
+    padding-inline: 0.7em;
+    background: #fdfdfd;
+    @include responsive(bmd) {
+      padding-inline: 0.5em;
+    }
+  }
+}
+
+.is_error,
+.is-danger {
+  border: 1px solid red;
+}
+.fv-plugins-message-container {
+  // padding-block: .5em;
+
+  .fv-help-block {
+    color: #ec2424e3;
+    font-family: "regular";
+    font-size: 1em;
+  }
+}
+.confirmbutton {
+}

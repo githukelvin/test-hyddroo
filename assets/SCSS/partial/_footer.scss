@@ -1,0 +1,86 @@
+@use "../fonts/" as *;
+@use "../mixins/" as *;
+
+.layout {
+  .hyddroo {
+    p {
+      font-family: "regular";
+      line-height: 1;
+      font-size: 1.25em;
+      @include responsive(bmd) {
+        font-size: 1em;
+      }
+    }
+    svg {
+      fill: #fff;
+      color: #fff;
+      font-size: 2em;
+    }
+  }
+  .quicklinks {
+    h1 {
+      font-size: 2em;
+      font-family: "sbold";
+      color: #fff;
+      @include responsive(bmd) {
+        font-size: 1.5em;
+      }
+    }
+    ul {
+      li {
+        a {
+          font-family: "regular";
+          font-size: 1.25em;
+          line-height: auto;
+          transition: 0.5s;
+          @include responsive(bmd) {
+            font-size: 1em;
+          }
+
+          &:hover {
+            color: #55b0d0;
+          }
+        }
+      }
+    }
+  }
+  .contact {
+    h1 {
+      font-size: 2em;
+      font-family: "sbold";
+      color: #fff;
+      @include responsive(bmd) {
+        font-size: 1.5em;
+      }
+    }
+    ul {
+      li {
+        p {
+          font-family: "medium";
+          font-size: 1.25em;
+        }
+      }
+    }
+  }
+}
+.termndconditions {
+  p {
+    font-family: "regular";
+    font-size: 1.5em;
+    @include responsive(bmd) {
+      font-size: 1.25em;
+    }
+    @include responsive(xs) {
+      font-size: 1em;
+    }
+  }
+  .terms {
+    p {
+      font-family: "regular";
+      font-size: 1.25em;
+      @include responsive(bmd) {
+        font-size: 1.1em;
+      }
+    }
+  }
+}

@@ -1,0 +1,108 @@
+@use "../fonts/" as *;
+@use "../mixins/" as *;
+
+.contactPage {
+  padding-top: 8em;
+  padding-bottom: 5em;
+
+  .containerM {
+    .intro {
+      p {
+        font-family: "sbold";
+        font-size: 1.5em;
+        line-height: 1.2;
+      }
+
+      h1 {
+        font-family: "exbold";
+        font-size: 2.5em;
+      }
+    }
+
+    .cDetails {
+      grid-template-columns: 25em 1fr;
+      gap: 3em;
+      width: 85%;
+      margin-top: 2em;
+      margin-inline: auto;
+
+      @include responsive(bmd) {
+        width: 100%;
+        grid-template-rows: auto;
+        grid-template-columns: 20em 1fr;
+      }
+
+      .address {
+        padding: 3em;
+        border-radius: 30px;
+
+        @include responsive(bmd) {
+          padding: 1em;
+        }
+
+        h1 {
+          font-family: "bold";
+          font-size: 1.5em;
+          line-height: 1.5;
+          padding-bottom: 1em;
+          @include responsive(bmd) {
+            font-size: 1.75em;
+            text-align: center;
+          }
+        }
+
+        ul {
+          li {
+            img {
+            }
+
+            p {
+              font-family: "medium";
+              font-size: 1.1em;
+              line-height: 1;
+              @include responsive(bmd) {
+                font-size: 1.3em;
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+
+      .submitemail {
+        h1 {
+          font-family: "bold";
+          font-size: 2.5em;
+          line-height: 1.5;
+          padding-bottom: 0.6em;
+          @include responsive(bmd) {
+            font-size: 1.5em;
+            font-family: "exbold";
+          }
+        }
+
+        .emailform {
+          form {
+            .nameEmail {
+              grid-template-columns: 1fr 1fr;
+              gap: 1.5em;
+
+              @include responsive(bmd) {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+              }
+            }
+
+            ::placeholder {
+              color: #5c5d5c;
+            }
+
+            button {
+              font-family: "bold";
+            }
+          }
+        }
+      }
+    }
+  }
+}

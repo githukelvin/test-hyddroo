@@ -1,0 +1,89 @@
+@use "../fonts/" as *;
+@use "../mixins/" as *;
+
+.navDiv {
+  // width: 100%;
+  margin-inline: auto;
+  @include responsive(xl) {
+    width: 90%;
+    margin-inline: auto;
+  }
+
+  .logo {
+    img {
+      width: 300px;
+      object-fit: contain;
+      @include responsive(cm) {
+        width: 180px;
+      }
+
+      @include responsive(lg) {
+        width: 180px;
+      }
+    }
+  }
+  .navbar {
+    margin-inline: auto;
+    @include responsive(cm) {
+      position: absolute;
+      z-index: 999;
+      width: 100%;
+      left: 0;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      top: 5em;
+      transform: translateX(-300%);
+      transition: transform 2s ease-out;
+      padding-bottom: 2em;
+    }
+    @include responsive(xl) {
+      margin-inline: unset;
+    }
+    &.active {
+      transform: translateX(0);
+      transition: transform 1s ease-in;
+    }
+    nav {
+      ul {
+        @include responsive(cm) {
+          display: flex;
+          flex-direction: column;
+        }
+        li {
+          a {
+            font-family: "medium";
+            font-size: 1.25em;
+            line-height: auto;
+            transition: 0.5s;
+
+            &:hover {
+              color: #55b0d0;
+            }
+            @include responsive(cm) {
+              font-size: 1.7em;
+            }
+          }
+        }
+      }
+    }
+  }
+  .ham {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    z-index: 8778;
+    background: url("~/assets/images/ham.png");
+    cursor: pointer;
+    background-repeat: no-repeat;
+    display: none;
+    background-size: cover;
+    @include responsive(bmd) {
+      display: block;
+      background-repeat: no-repeat;
+    }
+    @include responsive(xs) {
+      display: block;
+      background-repeat: no-repeat;
+    }
+  }
+}
